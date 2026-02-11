@@ -43,3 +43,5 @@ This can lead to:
 Additionally, since threads are not reused, thread creation becomes unnecessarily expensive and inefficient.
 
 #### Creating a new thread per task is dangerous because it provides no concurrency control or backpressure, which can lead to resource exhaustion under load spikes.
+
+__Context switching__ occurs when the CPU switches between threads. It requires saving and restoring thread state, causes cache misses, and consumes CPU time without doing useful work. Excessive context switching reduces throughput and system stability.
